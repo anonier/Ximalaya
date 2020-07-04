@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/magic_indicator"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="40dp" />
+    <RelativeLayout
+        android:id="@+id/serach_btn"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/main_color">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/search_icon"></ImageView>
+
+    </RelativeLayout>
+
+    </LinearLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/content_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="50dp"
+        android:overScrollMode="never"></androidx.viewpager.widget.ViewPager>
+
+
+    <LinearLayout
+        android:id="@+id/main_play_control_item"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="#dfdfdf"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical">
+        
+        <com.example.ximalaya.views.RoundRectImageView
+            android:id="@+id/main_track_cover"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/logo"></com.example.ximalaya.views.RoundRectImageView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/main_head_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+
+                android:textColor="#444444"
+                android:text="随便听听"></TextView>
+
+
+            <TextView
+                android:id="@+id/main_sub_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="#9d9d9d"
+                android:text="喜马拉雅"></TextView>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/main_paly_control"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/selector_palyer_play"></ImageView>
+    </LinearLayout>
+</RelativeLayout>
